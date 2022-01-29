@@ -1,0 +1,18 @@
+.controls {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.checkboxGroup {
+  display: flex;
+  justify-content: space-between;
+}
+
+@media only screen and (max-width: 600px) {
+  .checkboxGroup {
+    flex-direction: column;
+    align-items: center;
+  }
+}
