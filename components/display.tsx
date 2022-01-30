@@ -31,7 +31,7 @@ const Display = forwardRef<HTMLInputElement, Props>((props, ref) => {
 
       <div>
         {strengthDescription === 'Strong' ? <FaCheckCircle /> : <FaExclamationTriangle />}
-        {strengthDescription} Password
+        {` ${strengthDescription} Password`}
       </div>
 
       <button
@@ -47,20 +47,6 @@ const Display = forwardRef<HTMLInputElement, Props>((props, ref) => {
       >
         <FaCopy />
       </button>
-
-{/* 
-      <Button
-        className="icon-button"
-        iconClass="fas fa-sync-alt"
-        handleClick={() => setState({})}
-      />
-
-      <Button
-        className="icon-button"
-        iconClass="far fa-copy"
-        handleClick={() => copyToClipBoard(ref as React.RefObject<HTMLInputElement>)}
-      /> */}
-
 
     </div>
   )

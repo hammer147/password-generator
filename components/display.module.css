@@ -31,7 +31,6 @@
   }
 }
 
-/* buttons */
 
 .iconButton {
   border: none;
@@ -47,25 +46,4 @@
 
 .iconButton:active {
   color: white;
-}
-
-.copyButton {
-  width: 50%;
-  min-height: 30%;
-  font-size: 1.2em;
-  color: #0075ff;
-  background-color: white;
-  padding: 5px;
-  border-radius: 5px;
-  /* box-shadow: 5px 10px 18px rgba(0,117,255,0.1) inset; */
-  align-self: center;
-}
-
-.copyButton:hover {
-  box-shadow: none;
-  font-weight: bold;
-}
-
-.copyButton:active {
-  font-weight: unset;
 }
