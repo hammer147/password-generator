@@ -52,4 +52,6 @@ const Display = forwardRef<HTMLInputElement, Props>((props, ref) => {
   )
 })
 
+Display.displayName = 'Display' // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/display-name.md
+
 export default Display
