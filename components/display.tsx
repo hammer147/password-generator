@@ -3,6 +3,8 @@ import { FaCheckCircle, FaExclamationTriangle, FaSyncAlt, FaCopy } from 'react-i
 import useGeneratePassword from '../hooks/generate-password'
 import copyToClipBoard from '../utils/copy-to-clipboard'
 import { AppContext } from '../global-state/AppContext'
+import { ToastContainer, toast } from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.css'
 import styles from './display.module.css'
 
 type Props = {}
@@ -43,10 +45,23 @@ const Display = forwardRef<HTMLInputElement, Props>((props, ref) => {
 
       <button
         className={styles.iconButton}
-        onClick={() => copyToClipBoard(ref as React.RefObject<HTMLInputElement>)}
+        // onClick={() => copyToClipBoard(ref as React.RefObject<HTMLInputElement>)}
+        onClick={
+          () => navigator.clipboard.writeText(password)
+            .then(() => {
+              toast.dismiss()
+              toast.success('successfully copied to clipboard')
+            })
+            .catch(()=> {
+              toast.dismiss()
+              toast.error('copy to clipboard failed')
+            })
+        }
       >
         <FaCopy />
       </button>
+
+      <ToastContainer />
 
     </div>
   )
